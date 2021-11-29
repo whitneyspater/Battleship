@@ -17,7 +17,6 @@ public class Battleship {
         drawBoard();
         placeShips();
         guessShips();
-        drawShips(player);
 
         //switches player
         if(player == 1){
@@ -32,18 +31,24 @@ public class Battleship {
     //draws the 10 by 10 board onto the screen
     public static void drawBoard(){
         //DRAW METHOD HERE
+        //DRAW THE LINES ALWAYS
+        //2 IF STATEMENTS, IF PLAYER 1 DRAW PLAYER 1'S GUESSED SHIPS
+        //IF PLAYER 2 DRAW PLAYER 2'S GUESSED SHIP
     }
 
     public static void placeShips(){
         //METHOD TO ALLOW USERS TO PUT THEIR SHIPS IN THE SPOTS THEY CHOOSE
+        //USER INPUTS X1, X2, Y1, Y2
     }
 
     public static void guessShips(){
         //USER GUESSES WHERE OTHER PLAYER PLACED THEIR SHIPS
+        //CLICK A LOCATION ON THE BOARD
+        //CHECK THE OTHER USER'S SHIP ARRAY TO SEE IF THAT SPOT IS OCCUPIED
+        //IF YES- PLACE A GRAY SQUARE ON SCREEN IN BOX, AND FILL GUESSED ARRAY W INT 2 BC OCCUPIED
+        //IF NO- PLACE SMALL BLACK DOT ON SCREEN IN BOX, AND FILL GUESSED ARRAY W INT 1 BC EMPTY
+        //CLEAR SCREEN AND SWITCH PLAYER
     }
 
-    public static void drawShips(int player){
-
-    }
 
 }
