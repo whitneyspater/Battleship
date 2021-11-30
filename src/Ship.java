@@ -57,4 +57,8 @@ public class Ship {
         this.yLoc2 = y2;
     }
 
+    public void setLength(int length){
+        this.length = length;
+    }
+
 }
