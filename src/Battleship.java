@@ -2,8 +2,8 @@
 public class Battleship {
     public static void main(String[] args) {
         int player = 1;
-        String[][] player1 = new String [10][10];
-        String[][] player2 = new String [10][10];
+        String[][] player1Ships = new String [10][10];
+        String[][] player2Ships = new String [10][10];
 
         int[][] p1Guessed = new int [10][10];
         int[][] p2Guessed = new int [10][10];
@@ -14,16 +14,18 @@ public class Battleship {
         Ship shipD = new Ship(3);
         Ship shipE = new Ship();
 
-        drawBoard();
-        placeShips();
-        guessShips();
+        while(true){
+            drawBoard();
+            placeShips();
+            guessShips();
 
-        //switches player
-        if(player == 1){
-            player = 2;
-        }
-        else{
-            player = 1;
+            //switches players
+            if(player == 1){
+                player = 2;
+            }
+            else{
+                player = 1;
+            }
         }
 
     }
