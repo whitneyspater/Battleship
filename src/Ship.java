@@ -1,3 +1,5 @@
+import java.awt.*;
+
 public class Ship {
     private int xLoc1;
     private int yLoc1;
@@ -61,4 +63,43 @@ public class Ship {
         this.length = length;
     }
 
+
+    public void switchVals (int val1, int val2){
+        int temp = val1;
+        val1 = val2;
+        val2 = temp;
+    }
+
+    // Once the player types in their coordinates, this method fills in the coordinates of the ship into the board with gray rectangles.
+    public void draw(){
+        StdDraw.setPenColor(Color.GRAY);
+        for(int i=0; i<length; i++){
+            if (xLoc1 > xLoc2) {
+                StdDraw.filledRectangle(xLoc2-0.5+i, yLoc2-0.5, 0.5, 0.5);
+            }
+            if (yLoc1 > yLoc2) {
+                StdDraw.filledRectangle(xLoc2-0.5, yLoc2-0.5+i, 0.5, 0.5);
+            }
+            if(xLoc1 < xLoc2){
+                StdDraw.filledRectangle(xLoc1-0.5+i, yLoc1-0.5, 0.5, 0.5);
+            }
+            if(yLoc1 < yLoc2){
+                StdDraw.filledRectangle(xLoc1-0.5, yLoc1-0.5+i, 0.5, 0.5);
+            }
+
+
+        }
+
+    }
+
+    @Override
+    public String toString() {
+        return "Ship{" +
+                "xLoc1=" + xLoc1 +
+                ", yLoc1=" + yLoc1 +
+                ", xLoc2=" + xLoc2 +
+                ", yLoc2=" + yLoc2 +
+                ", length=" + length +
+                '}';
+    }
 }
